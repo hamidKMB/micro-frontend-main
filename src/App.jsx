@@ -13,17 +13,21 @@ const App = () => {
   console.log("homePage render");
 
   return (
-    <div className="text-3xl text-center">
+    <div className="text-3xl text-center flex flex-col w-screen h-screen">
       <ErrorBoundries>
         <Suspense fallback="Loading  . . .">
           <Header app={{ name: "Feature" }} />
         </Suspense>
       </ErrorBoundries>
-      <div>Name: home</div>
-      <div>Framework: react</div>
-      <div>Language: JavaScript</div>
-      <div>CSS: Tailwind</div>
-      <Footer />
+      <div className="flex flex-col grow my-auto">
+        <div>Name: home</div>
+        <div>Framework: react</div>
+        <div>Language: JavaScript</div>
+        <div>CSS: Tailwind</div>
+      </div>
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </div>
   );
 };
